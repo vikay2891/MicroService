@@ -1,0 +1,26 @@
+server:
+  port: ${PORT:8762} # Indicate the default PORT where this service will be started
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: false # telling the server not to register himself in the service
+    fetchRegistry: false
+  
+zuul:
+    prefix: /api
+    routes:
+      user-DB-Server:
+         path: /user-DB-Server/**
+         url: http://localhost:8080
+      user-client:
+         path: /user-client/**
+         url: http://localhost:8070
+         
+    
+    
+    
+      
+     
+

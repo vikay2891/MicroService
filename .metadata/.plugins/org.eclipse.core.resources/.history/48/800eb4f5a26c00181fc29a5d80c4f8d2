@@ -1,0 +1,27 @@
+server:
+  port: 8089
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: true # telling the server not to register himself in the service
+    fetchRegistry: true
+  
+zuul:
+    prefix: /api
+    routes:
+      user-DB-Server:
+         path: /server/**
+         service-id: USER-DB-SERVER
+      user-client:
+         path:/client/**
+      service-id: USER-CLIENT
+            
+         
+    
+    
+    
+      
+     
+
