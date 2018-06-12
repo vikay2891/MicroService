@@ -4,4 +4,5 @@
 <aop-project name="UserZuul"/>
 <aop-project name="User-Eureka-Server"/>
 <aop-project name="User-Service"/>
+<aop-project name="User-Config-Server"/>
 </aop-reference-model>

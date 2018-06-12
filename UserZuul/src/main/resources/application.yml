@@ -17,9 +17,9 @@ zuul:
     routes:
       user-DB-Server:
          path: /server/**
-         service-id: USER-DB-SERVER
+         url: http://localhost:8080
       user-client:
-         path:/client/**
+         path: /client/**
       service-id: USER-CLIENT
             
          

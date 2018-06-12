@@ -30,7 +30,7 @@ public class ClientController {
 	@GetMapping
 	public String  getUrl() {
 		System.out.println("Inside Client");
-		String url="http://user-DB-Server/user/db";
+		String url="http://user-DB-Server/user/db/api/users";
 	   String result= restTemplate.getForObject(url, String.class)+ " including client";
 	   System.out.println("hhhhhhhh"+result);
 		 return result;
